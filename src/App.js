@@ -1,11 +1,12 @@
-import GetInfo from "./components/getData/GetInfo";
+import Header from "./components/ui/Header";
+import CvForm from "./components/getData/CvForm";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>
-      <GetInfo />
-    </div>
+      <Header />
+      <CvForm />
+      </div>
   );
 }
 
