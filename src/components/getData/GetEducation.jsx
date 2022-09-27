@@ -3,7 +3,7 @@ import { useState } from "react";
 import Card from "../ui/Card";
 import "./forms.css";
 
-export default function GetEducation() {
+export default function GetEducation(props) {
   const [enteredSchool, setEnteredSchool] = useState("");
   const [enteredStudy, setEnteredStudy] = useState("");
   const [enteredStart, setEnteredStart] = useState("");
@@ -33,7 +33,7 @@ export default function GetEducation() {
       start: enteredStart,
       end: enteredEnd,
     };
-    console.log(education);
+   props.onSubmit(education)
   };
 
   return (

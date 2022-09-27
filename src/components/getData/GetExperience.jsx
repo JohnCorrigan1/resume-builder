@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Card from "../ui/Card";
 
-export default function GetExperience() {
+export default function GetExperience(props) {
   const [enteredCompany, setEnteredCompany] = useState("");
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredTasks, setEnteredTasks] = useState("");
@@ -25,7 +25,7 @@ export default function GetExperience() {
       title: enteredTitle,
       tasks: enteredTasks,
     };
-    console.log(experience);
+    props.onSubmit(experience)
   };
 
   return (

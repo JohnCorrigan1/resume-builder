@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Card from "../ui/Card";
 
-export default function GetInfo() {
+export default function GetInfo(props) {
   const [enteredName, setEnteredName] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPhone, setEnteredPhone] = useState("");
@@ -31,7 +31,8 @@ export default function GetInfo() {
       phone: enteredPhone,
       address: enteredAddress,
     };
-    console.log(info);
+
+    props.onSubmit(info)
   };
 
   return (
