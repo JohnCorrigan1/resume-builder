@@ -6,44 +6,40 @@ import Card from "../ui/Card";
 
 export default function CvForm(props) {
 
-    const [data, setData] = useState([])
+    const [infoData, setInfoData] = useState([])
+    const [educationData, setEducationData] = useState({})
+    const [experienceData, setExperienceData] = useState({})
 
-  const infoData = (info) => {
-    setData(prevData => {
-      return [  info, ...prevData ]
-  })
+  const getInfoData = (info) => {
+    setInfoData(info)
+    console.log(infoData)
   };
 
-  const educationData = (education) => {
-    setData(prevData => {
-        return [  education, ...prevData ]
-    })
-    
+  const getEducationData = (education) => {
+    setEducationData(education)
   };
 
-  const experienceData = (experience) => {
-    setData(prevData => {
-        return [  experience, ...prevData ]
-    })
+  const getExperienceData = (experience) => {
+    setExperienceData(experience)
   };
 
   const combineData = () => {
     const finalData = {
-      ...data[0],
-      ...data[1],
-      ...data[2]
+     infoData: infoData,
+     educationData: educationData,
+     experienceData: experienceData
     }
     props.onSave(finalData)
 }
 
   return (
     <div>
-      <GetInfo onSubmit={infoData} />
+      <GetInfo onSubmit={getInfoData} />
       <Card >
-      <GetEducation onSubmit={educationData} />
+      <GetEducation onSubmit={getEducationData} />
       <button className="">Add Another</button>
       </Card>
-      <GetExperience onSubmit={experienceData} />
+      <GetExperience onSubmit={getExperienceData} />
       <button onClick={combineData} >Submit</button>
     </div>
   );
