@@ -48,7 +48,7 @@ export default function GetEducation(props) {
           />
         </div>
         <div className="flex flex-col items-center">
-          <label htmlFor="area">Study area</label>
+          <label htmlFor="area">Degree</label>
           <input
             onChange={studyChangeHandler}
             type="text"
