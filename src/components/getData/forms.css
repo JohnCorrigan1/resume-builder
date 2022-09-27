@@ -1,6 +1,7 @@
 input{
     border-radius: 20px;
     padding: 2px;
+    padding-left: 5px;
     background-color: lightgray;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.6);
 }
