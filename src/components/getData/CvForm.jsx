@@ -7,8 +7,8 @@ import Card from "../ui/Card";
 export default function CvForm(props) {
 
     const [infoData, setInfoData] = useState([])
-    const [educationData, setEducationData] = useState({})
-    const [experienceData, setExperienceData] = useState({})
+    const [educationData, setEducationData] = useState([])
+    const [experienceData, setExperienceData] = useState([])
 
   const getInfoData = (info) => {
     setInfoData(info)
@@ -16,11 +16,15 @@ export default function CvForm(props) {
   };
 
   const getEducationData = (education) => {
-    setEducationData(education)
+    setEducationData(prevEducation => {
+        return [...prevEducation, education]
+    })
   };
 
   const getExperienceData = (experience) => {
-    setExperienceData(experience)
+    setExperienceData(prevExperience => {
+        return [...prevExperience, experience]
+    })
   };
 
   const combineData = () => {

@@ -33,6 +33,13 @@ const exampleUser = {
     experienceStart: "2022",
     experienceEnd: "present",
     tasks: "Daily stand up meetings. Code features on multiple projects. Work colaboratively with many team members."
+  },
+  {
+    company: "Google",
+    title: "Software Engineer",
+    experienceStart: "2022",
+    experienceEnd: "present",
+    tasks: "Daily stand up meetings. Code features on multiple projects. Work colaboratively with many team members."
   }
 ]
 
