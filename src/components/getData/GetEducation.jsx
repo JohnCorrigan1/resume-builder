@@ -37,7 +37,6 @@ export default function GetEducation(props) {
   };
 
   return (
-    <Card>
       <form onSubmit={submitHandler}>
         <div className="flex flex-col items-center">
           <label htmlFor="school">School Name</label>
@@ -57,28 +56,27 @@ export default function GetEducation(props) {
             className=" w-2/3"
           />
         </div>
+        <div className="flex justify-center gap-10">
         <div className="flex flex-col items-center">
-          <label htmlFor="start">Start Date</label>
+          <label htmlFor="schoolStart">Start Date</label>
           <input
             onChange={startChangeHandler}
             type="text"
-            id="start"
-            className=" w-2/3"
+            id="schoolStart"
           />
         </div>
         <div className="flex flex-col items-center">
-          <label htmlFor="end">End Date (blank if not complete)</label>
+          <label htmlFor="schoolEnd">End Date</label>
           <input
             onChange={endChangeHandler}
             type="text"
-            id="end"
-            className=" w-2/3"
+            id="schoolEnd"
           />
+        </div>
         </div>
         <div>
           <button type="submit">Save</button>
         </div>
       </form>
-    </Card>
   );
 }

@@ -5,6 +5,8 @@ export default function GetExperience(props) {
   const [enteredCompany, setEnteredCompany] = useState("");
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredTasks, setEnteredTasks] = useState("");
+  const [enteredStart, setEnteredStart] = useState("")
+  const [enteredEnd, setEnteredEnd] = useState("")
 
   const companyChangeHandler = (event) => {
     setEnteredCompany(event.target.value);
@@ -18,12 +20,23 @@ export default function GetExperience(props) {
     setEnteredTasks(event.target.value);
   };
 
+  const startChangeHandler = (event) => {
+    setEnteredStart(event.target.value)
+  }
+
+  const endChangeHandler = (event) => {
+    setEnteredEnd(event.target.value)
+  }
+
   const submitHandler = (event) => {
     event.preventDefault();
     const experience = {
       company: enteredCompany,
       title: enteredTitle,
+      experienceStart: enteredStart,
+      experienceEnd: enteredEnd,
       tasks: enteredTasks,
+
     };
     props.onSubmit(experience)
   };
@@ -42,6 +55,24 @@ export default function GetExperience(props) {
         <div className="flex flex-col items-center">
           <label htmlFor="title">Job Title</label>
           <input onChange={titleChangeHandler} type="text" className=" w-2/3" />
+        </div>
+        <div className="flex justify-center gap-10">
+        <div className="flex flex-col items-center">
+          <label htmlFor="schoolStart">Start Date</label>
+          <input
+            onChange={startChangeHandler}
+            type="text"
+            id="schoolStart"
+          />
+        </div>
+        <div className="flex flex-col items-center">
+          <label htmlFor="schoolEnd">End Date</label>
+          <input
+            onChange={endChangeHandler}
+            type="text"
+            id="schoolEnd"
+          />
+        </div>
         </div>
         <div className="flex flex-col items-center">
           <label htmlFor="tasks">Daily Tasks/Deatils</label>

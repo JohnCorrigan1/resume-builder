@@ -17,12 +17,12 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <div className="grid-container">
       <div className="forms">
        <CvForm onSave={getData} />
       </div>
-      <div className="resume mt-10">
+      <div className="resume mt-10 mb-5 min-h-4/5 sticky">
       <Resume data={enteredData} />
       </div>
       </div>
