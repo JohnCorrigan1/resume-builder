@@ -14,6 +14,7 @@ export default function Resume(props) {
         />
         {props.data.educationData.map((item) => (
           <ResumeEducation
+          key={Math.random()}
             school={item.school}
             start={item.start}
             end={item.end}
@@ -22,13 +23,14 @@ export default function Resume(props) {
         ))}
 
         {props.data.experienceData.map((item) => (
-        <ResumeExperience
-          company={item.company}
-          title={item.title}
-          start={item.experienceStart}
-          end={item.experienceEnd}
-          tasks={item.tasks}
-        />
+          <ResumeExperience
+            key={Math.random()}
+            company={item.company}
+            title={item.title}
+            start={item.experienceStart}
+            end={item.experienceEnd}
+            tasks={item.tasks}
+          />
         ))}
       </div>
     </div>

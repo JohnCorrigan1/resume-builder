@@ -6,7 +6,7 @@ export default function ResumeExperience(props){
             <div>{props.start} - {props.end}</div>
             </div>
             <div className="mt-2">
-                <h2>Job Title: {props.title}</h2>
+                <h2>Job Title:ඞ {props.title}</h2>
             </div>
             <div className="mt-2 ml-5 mr-5">{props.tasks}</div>
         </div>

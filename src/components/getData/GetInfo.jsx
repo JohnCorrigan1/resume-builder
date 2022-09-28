@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Card from "../ui/Card";
+import Button from "../ui/Button";
 
 export default function GetInfo(props) {
   const [enteredName, setEnteredName] = useState("");
@@ -74,9 +75,7 @@ export default function GetInfo(props) {
             id="address"
           />
         </div>
-        <div className="flex flex-col mr-auto ml-auto items-center">
-          <button type="submit">Save</button>
-        </div>
+          <Button text="Save"/>
       </form>
     </Card>
   );

@@ -2,7 +2,7 @@ import { useState } from "react";
 import GetInfo from "./GetInfo";
 import GetEducation from "./GetEducation";
 import GetExperience from "./GetExperience";
-import Card from "../ui/Card";
+import Button from "../ui/Button";
 
 export default function CvForm(props) {
 
@@ -36,15 +36,13 @@ export default function CvForm(props) {
     props.onSave(finalData)
 }
 
+
   return (
     <div>
       <GetInfo onSubmit={getInfoData} />
-      <Card >
       <GetEducation onSubmit={getEducationData} />
-      <button className="">Add Another</button>
-      </Card>
       <GetExperience onSubmit={getExperienceData} />
-      <button onClick={combineData} >Submit</button>
+      <Button text="Submit" onClick={combineData} >Submit</Button>
     </div>
   );
 }
